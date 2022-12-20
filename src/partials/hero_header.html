@@ -1,19 +1,9 @@
 <header class="header">
     <div class="header__container container">
         <a href="#" class="logo">
-            <img src="images/лого-min.png" alt="logo" width="40">
+            <img src="images/icelogo.png" alt="logo" width="40">
         </a>
         <nav class="site-nav">
-            <button type="button" class="site-nav__btn">
-                <svg width="32" height="32" aria-label="Вмикач меню навігації">
-                    <use class="site-nav__icon--open" href="images/eva_menu-fill.svg"></use>
-                </svg>
-            </button>
-            <button type="button" class="site-nav__btn">
-                <svg width="32" height="32" aria-label="Вимикач меню навігації">
-                    <use class="site-nav__icon--close" href="images/ep_close_mob.svg"></use>
-                </svg>
-            </button>
             <ul class="site-nav__list list">
                 <li class="site-nav__item"><a class="site-nav__link" href="#">Home</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="#">How it’s made?</a></li>
@@ -21,14 +11,85 @@
                 <li class="site-nav__item"><a class="site-nav__link" href="#">Contact</a></li>
             </ul>
         </nav>
-        <button type="button" class="btn-buy">Buy now</button>
+        <button type="button" class="site-nav__btn" data-menu-open>
+            <svg width="32" height="32" aria-label="Вмикач меню навігації">
+                <use class="site-nav__icon--open" href="images/symbol-defs.svg#icon-eva_menu_open"></use>
+            </svg>
+        </button>
+        <!--Mobile menu-->
+        <div class="mob-menu is-hidden" data-menu>
+            <div class="container">
+                <div class="mob-menu__wrap--top">
+                    <a href="#" class="logo">
+                        <img src="images/icelogo.png" alt="logo" width="40">
+                    </a>
+                    <button type="button" class="site-nav__btn" data-menu-close>
+                        <svg width="32" height="32" aria-label="Вимикач меню навігації">
+                            <use class="site-nav__icon--close" href="images/symbol-defs.svg#icon-eva_menu__close">
+                            </use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mob-menu__wrap--bottom">
+                    <ul class="mob-menu__list list">
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="#">Home</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="#">How it’s made?</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="#">Our products</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn-buy" data-modal-open>Buy now
+                    <svg width="12" height="12">
+                        <use class="btn-buy__icon" href="images/symbol-defs.svg#icon-ep_arrow-right-bold">
+                        </use>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
 </header>
-<main>
-    <section class="hero">
+<section class="hero">
+    <div class="container">
         <h1 class="hero__title">ice cream made with <span class="hero__title--accent">passion</span></h1>
-        <button class="hero__btn">Products</button>
-        <a href="#" class="hero__link">How it’s made?</a>
-        <img src="images/ice_mobile.jpg" alt="ice-cream">
-    </section>
-</main>
+        <div class="hero__wrap">
+            <button class="hero__btn">Products</button>
+            <a href="#" class="hero__link">How it’s made?</a>
+        </div>
+        <img src="images/bg_dots_mobile.png" alt="background-dots" class="bg-dots">
+        <img src="images/ice_mobile.png" alt="ice-cream"
+            class="bg-icecream animate__animated animate__rotateInDownLeft">
+    </div>
+</section>
+
+<!--Modal form-->
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <form class="modal-form">
+            <button class="btn-closed" data-modal-close>
+                <svg width="20" height="20">
+                    <use href="images/symbol-defs.svg#icon-clarity_close-line"></use>
+                </svg>
+            </button>
+            <p class="modal-form__header">Buy now</p>
+            <div class="modal-form__field">
+                <p class="error">Please, put correct information</p>
+                <label for="name" class="modal-form__label">Name</label>
+                <input type="text" name="name" id="name" placeholder="Tom Ford" required minlength="3"
+                    class="modal-form__input">
+            </div>
+            <div class="modal-form__field">
+                <label for="tel" class="modal-form__label">Phone</label>
+                <input type="tel" name="tel" id="tel" placeholder="+380 (96) 111-11-11" required
+                    title="+380 (96) 111-11-11" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                    class="modal-form__input">
+            </div>
+            <div class="modal-form__field">
+                <label for="comments" class="modal-form__label">Comment</label>
+                <textarea name="comments" id="comments" placeholder="Put your comments"
+                    class="modal-form__comments"></textarea>
+            </div>
+            <button type="submit" class="modal-form__btn">Submit</button> -->
+        </form>
+    </div>
+</div>

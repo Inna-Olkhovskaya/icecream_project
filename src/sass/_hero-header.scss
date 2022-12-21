@@ -168,6 +168,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    text-decoration: none;
     color: #000000;
     background-color: transparent;
     border: 2px solid #f8d24e;
@@ -241,7 +242,7 @@
   pointer-events: none;
 }
 
-.modal {
+.modal-header {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -284,7 +285,7 @@
   }
 }
 
-.modal-form {
+.modal-form-header {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -293,8 +294,8 @@
   margin-left: auto;
   margin-right: auto;
   padding: 28px;
-
-  &__header {
+  
+  &__title {
     font-family: 'Seymour One';
     font-style: normal;
     font-weight: 400;
@@ -303,6 +304,7 @@
     display: flex;
     align-items: center;
     text-align: center;
+    margin-bottom: 20px;
     color: #131313;
   }
 

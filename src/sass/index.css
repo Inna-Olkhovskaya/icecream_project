@@ -257,6 +257,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  text-decoration: none;
   color: #000000;
   background-color: transparent;
   border: 2px solid #f8d24e;

@@ -32,10 +32,10 @@
                 </div>
                 <div class="mob-menu__wrap--bottom">
                     <ul class="mob-menu__list list">
-                        <li class="mob-menu__item"><a class="mob-menu__link" href="#">Home</a></li>
-                        <li class="mob-menu__item"><a class="mob-menu__link" href="#">How it’s made?</a></li>
-                        <li class="mob-menu__item"><a class="mob-menu__link" href="#">Our products</a></li>
-                        <li class="mob-menu__item"><a class="mob-menu__link" href="#">Contact</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="#ice">Home</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="#How">How it’s made?</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="#products">Our products</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="#Contact">Contact</a></li>
                     </ul>
                 </div>
                 <button type="button" class="btn-buy" data-modal-open>Buy now
@@ -50,10 +50,10 @@
 </header>
 <section class="hero">
     <div class="container">
-        <h1 class="hero__title">ice cream made with <span class="hero__title--accent">passion</span></h1>
+        <h1 class="hero__title" id="ice">ice cream made with <span class="hero__title--accent">passion</span></h1>
         <div class="hero__wrap">
-            <button class="hero__btn">Products</button>
-            <a href="#" class="hero__link">How it’s made?</a>
+            <a href="#Products" class="hero__btn">Products</a>
+            <a href="#How" class="hero__link">How it’s made?</a>
         </div>
         <img src="images/bg_dots_mobile.png" alt="background-dots" class="bg-dots">
         <img src="images/ice_mobile.png" alt="ice-cream"
@@ -64,32 +64,49 @@
 <!--Modal form-->
 
 <div class="backdrop is-hidden" data-modal>
-    <div class="modal">
-        <form class="modal-form">
+    <div class="modal-header">
+        <form class="modal-form-header">
             <button class="btn-closed" data-modal-close>
                 <svg width="20" height="20">
                     <use href="images/symbol-defs.svg#icon-clarity_close-line"></use>
                 </svg>
             </button>
-            <p class="modal-form__header">Buy now</p>
-            <div class="modal-form__field">
+            <p class="modal-form-header__title">Buy now</p>
+            <ul class="modal-form-header__list">
+                <li class="modal-form-header__item">
+                    <!-- <img src="./images/pic_icecream_mobile.png" alt="ice-cream"> -->
+                    <input type="checkbox" class="modal-form-header__check visually-hidden" id="ic">
+                    <label class="modal-form-header__text" for="ic">ice cream</label>
+                </li>
+                <li class="modal-form-header__item">
+                    <!-- <img src="./images/pic_coffee_mobile.png" alt="ice-coffee"> -->
+                    <input type="checkbox" class="modal-form-header__check visually-hidden" id="icof">
+                    <label class="modal-form-header__text" for="icof">ice coffee</label>
+                </li>
+                <li class="modal-form-header__item">
+                    <!-- <img src="./images/pic_milkshakes_mobile.png" alt="milkshake"> -->
+                    <input type="checkbox" class="modal-form-header__check visually-hidden" id="msh">
+                    <label class="modal-form-header__text" for="msh">ice coffee</label>
+                </li>
+            </ul>
+            <div class="modal-form-header__field">
                 <p class="error">Please, put correct information</p>
-                <label for="name" class="modal-form__label">Name</label>
+                <label for="name" class="modal-form-header__label">Name</label>
                 <input type="text" name="name" id="name" placeholder="Tom Ford" required minlength="3"
-                    class="modal-form__input">
+                    class="modal-form-header__input">
             </div>
-            <div class="modal-form__field">
-                <label for="tel" class="modal-form__label">Phone</label>
+            <div class="modal-form-header__field">
+                <label for="tel" class="modal-form-header__label">Phone</label>
                 <input type="tel" name="tel" id="tel" placeholder="+380 (96) 111-11-11" required
                     title="+380 (96) 111-11-11" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-                    class="modal-form__input">
+                    class="modal-form-header__input">
             </div>
-            <div class="modal-form__field">
-                <label for="comments" class="modal-form__label">Comment</label>
+            <div class="modal-form-header__field">
+                <label for="comments" class="modal-form-header__label">Comment</label>
                 <textarea name="comments" id="comments" placeholder="Put your comments"
-                    class="modal-form__comments"></textarea>
+                    class="modal-form-header__comments"></textarea>
             </div>
-            <button type="submit" class="modal-form__btn">Submit</button> -->
+            <button type="submit" class="modal-form-header__btn">Submit</button> -->
         </form>
     </div>
 </div>

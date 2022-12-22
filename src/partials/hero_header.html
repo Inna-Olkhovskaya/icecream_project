@@ -4,65 +4,46 @@
             <img src="images/icelogo.png" alt="logo" width="40">
         </a>
         <nav class="site-nav">
-            <ul class="site-nav__list list">
-                <li class="site-nav__item"><a class="site-nav__link" href="#">Home</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="#">How it’s made?</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="#">Our products</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <button type="button" class="site-nav__btn" data-menu-open>
-            <svg width="32" height="32" aria-label="Вмикач меню навігації">
-                <use class="site-nav__icon--open" href="images/symbol-defs.svg#icon-eva_menu_open"></use>
-            </svg>
-        </button>
-        <!--Mobile menu-->
-        <div class="mob-menu is-hidden" data-menu>
-            <div class="container">
-                <div class="mob-menu__wrap--top">
-                    <a href="#" class="logo">
-                        <img src="images/icelogo.png" alt="logo" width="40">
-                    </a>
-                    <button type="button" class="site-nav__btn" data-menu-close>
-                        <svg width="32" height="32" aria-label="Вимикач меню навігації">
-                            <use class="site-nav__icon--close" href="images/symbol-defs.svg#icon-eva_menu__close">
+            <button type="button" class="site-nav__btn" data-menu-open>
+                <svg width="32" height="32" aria-label="Вмикач меню навігації">
+                    <use class="site-nav__icon--open" href="images/symbol-defs.svg#icon-eva_menu_open"></use>
+                </svg>
+            </button>
+            <!--Mobile menu-->
+            <div class="mob-menu is-hidden" data-menu>
+                <div class="container">
+                    <div class="mob-menu__wrap--top">
+                        <a href="#" class="logo">
+                            <img src="images/icelogo.png" alt="logo" width="40">
+                        </a>
+                        <button type="button" class="site-nav__btn" data-menu-close>
+                            <svg width="32" height="32" aria-label="Вимикач меню навігації">
+                                <use class="site-nav__icon--close" href="images/symbol-defs.svg#icon-eva_menu__close">
+                                </use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mob-menu__wrap--bottom">
+                        <ul class="mob-menu__list list">
+                            <li class="mob-menu__item"><a class="mob-menu__link" href="#ice">Home</a></li>
+                            <li class="mob-menu__item"><a class="mob-menu__link" href="#How">How it’s made?</a></li>
+                            <li class="mob-menu__item"><a class="mob-menu__link" href="#products">Our products</a></li>
+                            <li class="mob-menu__item"><a class="mob-menu__link" href="#Contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-buy" data-modal-open>Buy now
+                        <svg width="12" height="12">
+                            <use class="btn-buy__icon" href="images/symbol-defs.svg#icon-ep_arrow-right-bold">
                             </use>
                         </svg>
                     </button>
                 </div>
-                <div class="mob-menu__wrap--bottom">
-                    <ul class="mob-menu__list list">
-                        <li class="mob-menu__item"><a class="mob-menu__link" href="#ice">Home</a></li>
-                        <li class="mob-menu__item"><a class="mob-menu__link" href="#How">How it’s made?</a></li>
-                        <li class="mob-menu__item"><a class="mob-menu__link" href="#products">Our products</a></li>
-                        <li class="mob-menu__item"><a class="mob-menu__link" href="#Contact">Contact</a></li>
-                    </ul>
-                </div>
-                <button type="button" class="btn-buy" data-modal-open>Buy now
-                    <svg width="12" height="12">
-                        <use class="btn-buy__icon" href="images/symbol-defs.svg#icon-ep_arrow-right-bold">
-                        </use>
-                    </svg>
-                </button>
             </div>
-        </div>
+        </nav>
     </div>
 </header>
-<section class="hero">
-    <div class="container">
-        <h1 class="hero__title" id="ice">ice cream made with <span class="hero__title--accent">passion</span></h1>
-        <div class="hero__wrap">
-            <a href="#Products" class="hero__btn">Products</a>
-            <a href="#How" class="hero__link">How it’s made?</a>
-        </div>
-        <img src="images/bg_dots_mobile.png" alt="background-dots" class="bg-dots">
-        <img src="images/ice_mobile.png" alt="ice-cream"
-            class="bg-icecream animate__animated animate__rotateInDownLeft">
-    </div>
-</section>
 
 <!--Modal form-->
-
 <div class="backdrop is-hidden" data-modal>
     <div class="modal-header">
         <form class="modal-form-header">
@@ -110,3 +91,17 @@
         </form>
     </div>
 </div>
+
+<!--Hero section-->
+<section class="hero">
+    <div class="container">
+        <h1 class="hero__title" id="ice">ice cream made with <span class="hero__title--accent">passion</span></h1>
+        <div class="hero__wrap">
+            <a href="#Products" class="hero__btn">Products</a>
+            <a href="#How" class="hero__link">How it’s made?</a>
+        </div>
+        <img src="images/bg_dots_mobile.png" alt="background-dots" class="bg-dots">
+        <img src="images/ice_mobile.png" alt="ice-cream"
+            class="bg-icecream animate__animated animate__rotateInDownLeft">
+    </div>
+</section>

@@ -1,13 +1,13 @@
 <section class="product" id="Products">
     <div class="product__container container">
         <span class="product__label">100% natural</span>
-        <h2 class="product__title">products</h2>
+        <h2 class="product__title" id="Prod">products</h2>
         <ul class="product__list list">
             <li class="product__item product__item--ice">
                 <h3 class="product__name product__name--ice">ice cream</h3>
                 <p class="product__text">Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural
                     stabilizer</p>
-                <button type="button" class="product__btn">
+                <button type="button" class="product__btn" data-modal-open>
                     <svg width="40" height="16">
                         <use class="product__icon" href="./images/symbol-defs.svg#icon-arrow"></use>
                     </svg>
@@ -17,7 +17,7 @@
                 <h3 class="product__name product__name--coffee">ice coffee</h3>
                 <p class="product__text">Fragrant invigorating drink created from 100% natural ingredients without the
                     use of preservatives and flavor enhancers</p>
-                <button type="button" class="product__btn">
+                <button type="button" class="product__btn" data-modal-open>
                     <svg width="40" height="16">
                         <use class="product__icon" href="./images/symbol-defs.svg#icon-arrow"></use>
                     </svg>
@@ -28,7 +28,7 @@
                 <p class="product__text">Sweet drinks based on milk and ice cream, supplemented with syrups, fruits,
                     berries and other sweets of your choice
                 </p>
-                <button type="button" class="product__btn">
+                <button type="button" class="product__btn" data-modal-open>
                     <svg width="40" height="16">
                         <use class="product__icon" href="./images/symbol-defs.svg#icon-arrow"></use>
                     </svg>
@@ -37,3 +37,52 @@
         </ul>
     </div>
 </section>
+
+<!--Modal form-->
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal-header">
+        <form class="modal-form-header">
+            <button class="btn-closed" data-modal-close>
+                <svg width="20" height="20">
+                    <use href="images/symbol-defs.svg#icon-clarity_close-line"></use>
+                </svg>
+            </button>
+            <p class="modal-form-header__title">Buy now</p>
+            <ul class="modal-form-header__list">
+                <li class="modal-form-header__item">
+                    <!-- <img src="./images/pic_icecream_mobile.png" alt="ice-cream"> -->
+                    <input type="checkbox" class="modal-form-header__check visually-hidden" id="ic">
+                    <label class="modal-form-header__text" for="ic">ice cream</label>
+                </li>
+                <li class="modal-form-header__item">
+                    <!-- <img src="./images/pic_coffee_mobile.png" alt="ice-coffee"> -->
+                    <input type="checkbox" class="modal-form-header__check visually-hidden" id="icof">
+                    <label class="modal-form-header__text" for="icof">ice coffee</label>
+                </li>
+                <li class="modal-form-header__item">
+                    <!-- <img src="./images/pic_milkshakes_mobile.png" alt="milkshake"> -->
+                    <input type="checkbox" class="modal-form-header__check visually-hidden" id="msh">
+                    <label class="modal-form-header__text" for="msh">ice coffee</label>
+                </li>
+            </ul>
+            <div class="modal-form-header__field">
+                <p class="error">Please, put correct information</p>
+                <label for="name" class="modal-form-header__label">Name</label>
+                <input type="text" name="name" id="name" placeholder="Tom Ford" required minlength="3"
+                    class="modal-form-header__input">
+            </div>
+            <div class="modal-form-header__field">
+                <label for="tel" class="modal-form-header__label">Phone</label>
+                <input type="tel" name="tel" id="tel" placeholder="+380 (96) 111-11-11" required
+                    title="+380 (96) 111-11-11" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                    class="modal-form-header__input">
+            </div>
+            <div class="modal-form-header__field">
+                <label for="comments" class="modal-form-header__label">Comment</label>
+                <textarea name="comments" id="comments" placeholder="Put your comments"
+                    class="modal-form-header__comments"></textarea>
+            </div>
+            <button type="submit" class="modal-form-header__btn">Submit</button> -->
+        </form>
+    </div>
+</div>
